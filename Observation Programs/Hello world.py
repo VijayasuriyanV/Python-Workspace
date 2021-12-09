@@ -1,1 +1,1 @@
-print("Hello world!")
+print("Hello world! \U0001F609")
