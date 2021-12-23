@@ -97,13 +97,48 @@ def swap_two_numbers():
     print("The value of a is ",a)
     print("The value of b is ",b)
 
+#--------------------------------------------------------------------------
 
+
+#circulate_n_variables
+def circulate_n_variables():
+    n = int(input("Enter number of values to store in list: "))
+    l = []
+    
+    for val in range(0,n,1):
+        num= int(input("Enter the integer : "))
+        l.append(num)
+    print("Circulating the elements of list ", l)
+    
+    for val in range(0,n,1):
+        num = l.pop(0)
+        l.append(num)
+        print(l)
+
+
+#--------------------------------------------------------------------------
+
+#Distance_between_points
+
+def distance_between_points():
+    import math
+    x1 = int(input("Enter coordinates for Point 1 : \n x1 = "))
+    y1 = int(input("Enter coordinates for Point 1 : \n y1 = "))
+
+    x2 = int(input("Enter coordinates for Point 2 : \n x2 = "))
+    y2 = int(input("Enter coordinates for Point 2 : \n y2 = "))
+    
+    dist = math.sqrt( ((x2-x1)**2) + ((y2-y1)**2) )
+
+    print("Distance between given points is", round(dist,2))
+
+#--------------------------------------------------------------------------
 
 
 #All in program 
 print("\n\nH4I , H4VE 4 NICE D4Y\n\n")
 print("Choose Any one Program\n")
-print(" 1.Area of Circle\n 2.Area of Triangle\n 3.Celsius to Fahrenheit\n 4.GCD\n 5.Greater number among the 3 numbers\n 6.Print Hello World\n 7.Multiplication Table\n 8.To check the number is positive or Not\n 9.Sum of two numbers\n 10.Swap two numbers\n 11.To check Leap year\n\n")
+print(" 1.Area of Circle\n 2.Area of Triangle\n 3.Celsius to Fahrenheit\n 4.GCD\n 5.Greater number among the 3 numbers\n 6.Print Hello World\n 7.Multiplication Table\n 8.To check the number is positive or Not\n 9.Sum of two numbers\n 10.Swap two numbers\n 11.To check Leap year\n 12.To Circulate N variables\n 13.To Find Distance between points\n\n")
 prog=int(input("Enter the number , of which program you want to use : "))
 print("\n\n")
 if(prog==1):
@@ -149,7 +184,12 @@ elif(prog==10):
 elif(prog==11):
     print("To check leap year or not ........................")
     leap_year()
-
+elif(prog==12):
+    print("To Circulate N Variables ........................")
+    circulate_n_variables()
+elif(prog==13):
+    print("To Find Distance between points ........................")
+    distance_between_points()
 else:
     print("Invalid Option")
 
